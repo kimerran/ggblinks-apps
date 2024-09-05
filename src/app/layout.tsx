@@ -29,6 +29,8 @@ export default function RootLayout({
     <meta name="og:image" content="https://i.imgur.com/CXh9lkt.jpeg" />
     <meta name="twitter:image" content="https://i.imgur.com/CXh9lkt.jpeg" />
 
+    <meta name="dscvr:canvas:version" content="vNext"/>
+
     <title>GGBlinks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />

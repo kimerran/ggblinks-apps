@@ -2,13 +2,41 @@
 // import Image from "next/image";
 
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+// import { CanvasClient, CanvasInterface } from "@dscvr-one/canvas-client-sdk";
+// import { Transaction } from "@solana/web3.js";
 
 // import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
+import bs58 from 'bs58'
+import { registerCanvasWallet } from "@dscvr-one/canvas-wallet-adapter";
+
 export default function Home() {
+  // const [canvasClient, setCanvasClient] = useState<CanvasClient>()
 
   const [finalUrl, setFinalUrl] = useState("")
+
+  // useEffect(() => {
+  //   const client = new CanvasClient()
+  //   setCanvasClient(client)
+    
+
+  //   registerCanvasWallet(client);
+  // }, [])
+
+  // const createTx = async (
+  //   response: CanvasInterface.User.ConnectWalletResponse
+  // ): Promise<CanvasInterface.User.UnsignedTransaction | undefined> => {
+
+  //   // const txString = "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAMFH2BDnoPhvZkB2MOTAl1FPqnQz272zMkC6WG05igmLSxAtDtIGMrQ8aaGlWgAJ6jvyCqp83LWOUV25rUyawq3nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwZGb+UhFzL/7K26csOb57yM5bvF9xJrLEObOkAAAAAFSlNamSkhBk0k6HFg2jh8fDW13bySu4HkH6hAQQVEjST7pB0kfaExunZqVLw+cJbdpCT10osfPaxKZdVmjJUcBAMABQJAQg8AAwAJAxAnAAAAAAAAAgIAAQwCAAAAIKEHAAAAAAAEAQAiQmxpbmtzaWdodHNBY3Rpb258VjJ8MTcyNTQ1MDkzNTIyOA=="
+  //   const transaction = new Transaction().compileMessage()
+  //   transaction.serialize()
+  //   const unsignedTx = bs58.encode(transaction.serialize());
+  
+  //   return {
+  //     unsignedTx
+  //   };
+  // };
 
   return (
     <>
@@ -24,7 +52,6 @@ export default function Home() {
           <h1>Convert your post into Blinks</h1>
           <input
             onChange={(e) => {
-
               setFinalUrl(`https://ggbl.ink/${e.target.value}`)
             }}
             id="hero-input"
